@@ -1,0 +1,23 @@
+MATAM-KUSRP-2024 Mini-Proje
+13 Haziran 2024
+
+Ekteki DATA_split.zip arşivinin içinde şu dosyalar mevcuttur:
+
+DATA_4sn_trn.txt
+DATA_4sn_val.txt
+DATA_4sn_tst.txt
+
+Bu dosyaların her satırında <tab> ile ayrılmış 201 sayı göreceksiniz. İlk 200 sayı istasyona
+varan ilk deprem dalgasının 4 saniyelik bir kesidini, 201. sayı ise daha sonra gelen
+depremin şiddetini belirtmektedir. Mini-projenin amacı bu 4 saniyelik kesitten deprem
+şiddetini tahmin etmektir.
+
+trn dosyasını eğitim için, val dosyasını test ve optimizasyon için kullanabilirsiniz. tst
+dosyasında cevaplar (201. kolon) 0'larla gizlenmiştir. Çalışmanızı tamamladığınızda tst
+dosyasının formatını bozmadan 0'ları modelinizin cevaplarıyla değiştirip, çalışmanın kısa
+bir özeti ile birlikte matam-kusrp-2024@googlegroups.com adresine en geç 24 Haziran 2024 gün
+sonuna kadar gönderiniz. Çalışma için doğal ya da yapay bir zekadan yardım aldıysanız bunu
+da lütfen özetinizde belirtin.
+
+İyi çalışmalar dilerim,
+Deniz Yuret
