@@ -50,18 +50,25 @@ class EarthquakePredictor(nn.Module):
         self.fc3 = nn.Linear(64, 32)
         self.fc4 = nn.Linear(32, 1)
         self.relu = nn.ReLU()
+        self.sigmoid = nn.Sigmoid()
+
 
     def forward(self, x):
-        x = self.relu(self.fc1(x))
-        x = self.relu(self.fc2(x))
-        x = self.relu(self.fc3(x))
+        x = self.sigmoid(self.fc1(x))
+        x = self.sigmoid(self.fc2(x))
+        x = self.sigmoid(self.fc3(x))
         x = self.fc4(x)
         return x
 
 # Initialize the model, loss function, and optimizer
 model = EarthquakePredictor()
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+#optimizer = optim.Adam(model.parameters(), lr=0.001)
+#optimizer = torch.optim.RMSprop(model.parameters(), lr=0.001)
+#optimizer = torch.optim.Adagrad(model.parameters(), lr=0.01)
+#optimizer = torch.optim.Adadelta(model.parameters(), lr=1.0)
+optimizer = torch.optim.AdamW(model.parameters(), lr=0.001)
+
 
 # Training loop
 num_epochs = 50
